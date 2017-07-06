@@ -23,7 +23,7 @@ class utils {
   
   constructor() {
     //create eventsMap
-    this.eventsMap = [];
+    this.eventsMap = {};
     this.eventsMap['ElectionAdminAppointed'] = ElectionAdminAppointed;
     this.eventsMap['ElectionAdminCreated'] = ElectionAdminCreated;
     this.eventsMap['OrganizationCreated'] = OrganizationCreated;
@@ -36,7 +36,7 @@ class utils {
     this.eventsMap['VoterHasVoted'] = VoterHasVoted;
     this.eventsMap['VoterRegistered'] = VoterRegistered;
     //create aggregateMap
-    this.aggregateMap = [];
+    this.aggregateMap = {};
     this.aggregateMap['ElectionAdmin'] = ElectionAdmin;
     this.aggregateMap['PostalAddress'] = PostalAddress;
     this.aggregateMap['Organization'] = Organization;
