@@ -53,7 +53,7 @@ class Utils {
     if (!eventClass) {
       throw new Error(`No event class registered for eventType "${ev.eventType}".`)
     }
-    eventObject.__proto__ = eventClass.prototype
+    Object.setPrototypeOf(eventObject, eventClass.prototype)
     return eventObject
   }
 
@@ -68,7 +68,7 @@ class Utils {
     const aggregateJSON = JSON.stringify(aggregate)
     const aggregateObject = JSON.parse(aggregateJSON)
 
-    aggregateObject.__proto__ = AggregateClass.prototype
+    Object.setPrototypeOf(aggregateObject, AggregateClass.prototype)
     return aggregateObject
   }
 
