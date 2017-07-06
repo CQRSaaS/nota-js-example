@@ -6,7 +6,7 @@ class Vote {
   constructor () {
     this.id = null
     this.referendumId = null
-	  this.vote = null
+    this.vote = null
     this.version = -1
   }
 
