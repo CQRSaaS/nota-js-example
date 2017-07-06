@@ -64,6 +64,6 @@ class Voter {
       new VoterRegistered(command.voterId, command.organizationId, command.firstname, command.lastname, command.address)
     )
   }
-};
+}
 
 module.exports = Voter

@@ -5,6 +5,6 @@ class ElectionAdminCreated {
     this.lastname = lastname // mandatory
     this.address = address // mandatory. MUST contain zip code.
   }
-};
+}
 
 module.exports = ElectionAdminCreated

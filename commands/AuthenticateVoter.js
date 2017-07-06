@@ -5,6 +5,6 @@ class AuthenticateVoter {
     this.voterId = voterId // mandatory
     this.voterList = voterList // mandatory
   }
-};
+}
 
 module.exports = AuthenticateVoter

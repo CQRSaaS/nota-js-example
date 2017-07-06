@@ -5,6 +5,6 @@ class CreateElectionAdmin {
     this.lastname = lastname // mandatory
     this.address = address // mandatory.
   }
-};
+}
 
 module.exports = CreateElectionAdmin

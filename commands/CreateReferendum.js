@@ -6,6 +6,6 @@ class CreateReferendum {
     this.proposal = proposal // mandatory
     this.options = options // mandatory
   }
-};
+}
 
 module.exports = CreateReferendum

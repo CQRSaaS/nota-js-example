@@ -4,6 +4,6 @@ class CastVote {
     this.voterId = voterId
     this.vote = vote
   }
-};
+}
 
 module.exports = CastVote

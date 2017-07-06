@@ -50,6 +50,6 @@ class Vote {
       new VoteCast(command.referendumId, command.vote)
     )
   }
-};
+}
 
 module.exports = Vote

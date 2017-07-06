@@ -9,6 +9,6 @@ class PostalAddress {
     this.addressCountry = addressCountry // e.g. "USA". Alpha-3 code as of https://en.wikipedia.org/wiki/ISO_3166-1 .
     this.version = -1
   }
-};
+}
 
 module.exports = PostalAddress

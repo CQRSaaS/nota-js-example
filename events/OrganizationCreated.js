@@ -5,6 +5,6 @@ class OrganizationCreated {
     this.name = name // mandatory
     this.electionAdminId = electionAdminId // mandatory
   }
-};
+}
 
 module.exports = OrganizationCreated

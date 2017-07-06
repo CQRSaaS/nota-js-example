@@ -6,6 +6,6 @@ class VoterRegistered {
     this.lastname = lastname
     this.address = address
   }
-};
+}
 
 module.exports = VoterRegistered

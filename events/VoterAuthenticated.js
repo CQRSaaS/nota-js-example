@@ -4,6 +4,6 @@ class VoterAuthenticated {
     this.organizationId = organizationId // mandatory
     this.voterId = voterId // mandatory
   }
-};
+}
 
 module.exports = VoterAuthenticated
