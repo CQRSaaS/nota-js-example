@@ -206,7 +206,7 @@ class Referendum {
     if (!command.organizationId) {
       validationErrors.push({'field': 'organizationId', 'msg': 'Organization does not exist.'})
     }
-    if (this.status != 'polls_open') {
+    if (this.status !== 'polls_open') {
       validationErrors.push({'field': '', 'msg': 'Polls are not open.'})
     }
     if (!command.voterId) {
@@ -216,7 +216,7 @@ class Referendum {
     if (voter === undefined) {
       validationErrors.push({'field': 'voterId', 'msg': 'Voter is not on voter list'})
     }
-    if (this.authenticatedVoters.indexOf(command.voterId) != -1) {
+    if (this.authenticatedVoters.indexOf(command.voterId) !== -1) {
       validationErrors.push({'field': 'voterId', 'msg': 'Voter has already voted'})
     }
     if (validationErrors.length > 0) {
@@ -232,7 +232,7 @@ class Referendum {
     if (!command.referendumId) {
       validationErrors.push({'field': 'referendumId', 'msg': 'Referendum id is a required field.'})
     }
-    if (this.status != 'polls_open') {
+    if (this.status !== 'polls_open') {
       validationErrors.push({'field': '', 'msg': 'Polls are not open.'})
     }
     if (!command.vote) {
