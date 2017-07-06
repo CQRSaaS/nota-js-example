@@ -1,7 +1,7 @@
 class DeleteReferendum {
-  constructor(referendumId) {
-    this.referendumId = referendumId; // mandatory
+  constructor (referendumId) {
+    this.referendumId = referendumId // mandatory
   }
 };
 
-module.exports = DeleteReferendum;
+module.exports = DeleteReferendum

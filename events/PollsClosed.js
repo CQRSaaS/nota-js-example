@@ -1,7 +1,7 @@
 class PollsClosed {
-  constructor(referendumId) {
-    this.referendumId = referendumId; 
+  constructor (referendumId) {
+    this.referendumId = referendumId
   }
 };
 
-module.exports = PollsClosed;
+module.exports = PollsClosed

@@ -1,9 +1,9 @@
 class CreateOrganization {
-  constructor(organizationId, name, electionAdminId) {
-    this.organizationId = organizationId;  // mandatory
-    this.name = name; // mandatory
-    this.electionAdminId = electionAdminId; // mandatory
+  constructor (organizationId, name, electionAdminId) {
+    this.organizationId = organizationId  // mandatory
+    this.name = name // mandatory
+    this.electionAdminId = electionAdminId // mandatory
   }
 };
 
-module.exports = CreateOrganization;
+module.exports = CreateOrganization
