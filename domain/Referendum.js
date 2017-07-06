@@ -144,10 +144,10 @@ class Referendum {
       validationErrors.push({'field': 'referendumId', 'msg': 'Referendum id is a required field.'})
     }
     if (this.status === 'polls_open') {
-      validationErrors.push({ 'field': '', 'msg': "Can't delete. Polls are open."})
+      validationErrors.push({'field': '', 'msg': "Can't delete. Polls are open."})
     }
     if (this.status === 'polls_closed') {
-      validationErrors.push({ 'field': '', 'msg': "Polls are closed. Can't delete a completed referendum."})
+      validationErrors.push({'field': '', 'msg': "Polls are closed. Can't delete a completed referendum."})
     }
     if (validationErrors.length > 0) {
       throw new errors.ValidationFailed(validationErrors)
