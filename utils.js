@@ -19,7 +19,7 @@ const Voter = require('./domain/Voter.js');
 const Vote = require('./domain/Vote.js');
 
 
-class utils {
+class Utils {
   
   constructor() {
     //create eventsMap
@@ -77,4 +77,4 @@ class utils {
   emptyUUID() { return "00000000-0000-0000-0000-000000000000"; }
 }
 
-module.exports = utils;
+module.exports = Utils;
