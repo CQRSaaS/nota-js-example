@@ -58,17 +58,17 @@ class Utils {
   }
 
   convertToTypedAggregate (aggregate, aggregateType) {
-    const aggregateClass = this.aggregateMap[aggregateType]
-    if (!aggregateClass) {
+    const AggregateClass = this.aggregateMap[aggregateType]
+    if (!AggregateClass) {
       throw new Error(`No aggregate class registered for aggregateType "${aggregateType}".`)
     }
     if (!aggregate) {
-      aggregate = new aggregateClass()
+      aggregate = new AggregateClass()
     }
     const aggregateJSON = JSON.stringify(aggregate)
     const aggregateObject = JSON.parse(aggregateJSON)
 
-    aggregateObject.__proto__ = aggregateClass.prototype
+    aggregateObject.__proto__ = AggregateClass.prototype
     return aggregateObject
   }
 
