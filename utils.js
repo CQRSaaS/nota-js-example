@@ -1,22 +1,25 @@
-// Events
-const ElectionAdminAppointed = require('./events/ElectionAdminAppointed')
-const ElectionAdminCreated = require('./events/ElectionAdminCreated')
-const OrganizationCreated = require('./events/OrganizationCreated')
-const PollsClosed = require('./events/PollsClosed')
-const PollsOpened = require('./events/PollsOpened')
-const ReferendumCreated = require('./events/ReferendumCreated')
-const ReferendumDeleted = require('./events/ReferendumDeleted')
-const VoteCast = require('./events/VoteCast')
-const VoterAuthenticated = require('./events/VoterAuthenticated')
-const VoterHasVoted = require('./events/VoterHasVoted')
-const VoterRegistered = require('./events/VoterRegistered')
-// Domain
-const ElectionAdmin = require('./domain/ElectionAdmin.js')
-const Organization = require('./domain/Organization.js')
-const PostalAddress = require('./domain/PostalAddress.js')
-const Referendum = require('./domain/Referendum.js')
-const Voter = require('./domain/Voter.js')
-const Vote = require('./domain/Vote.js')
+const {
+  ElectionAdminAppointed,
+  ElectionAdminCreated,
+  OrganizationCreated,
+  PollsClosed,
+  PollsOpened,
+  ReferendumCreated,
+  ReferendumDeleted,
+  VoteCast,
+  VoterAuthenticated,
+  VoterHasVoted,
+  VoterRegistered
+} = require('./events')
+
+const {
+  ElectionAdmin,
+  Organization,
+  PostalAddress,
+  Referendum,
+  Vote,
+  Voter
+} = require('./domain')
 
 class Utils {
   constructor () {
