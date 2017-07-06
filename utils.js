@@ -49,11 +49,11 @@ class Utils {
     }
     const eventJSON = JSON.stringify(ev.event)
     const eventObject = JSON.parse(eventJSON)
-    const eventClass = this.eventsMap[ev.eventType]
-    if (!eventClass) {
+    const EventClass = this.eventsMap[ev.eventType]
+    if (!EventClass) {
       throw new Error(`No event class registered for eventType "${ev.eventType}".`)
     }
-    Object.setPrototypeOf(eventObject, eventClass.prototype)
+    Object.setPrototypeOf(eventObject, EventClass.prototype)
     return eventObject
   }
 
