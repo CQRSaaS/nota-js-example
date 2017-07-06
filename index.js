@@ -33,38 +33,47 @@ const VoterRegistered = require('./events/VoterRegistered')
 
 const Utils = require('./utils')
 
-exports = module.exports
-exports.commands = {}
-exports.commands.AuthenticateVoter = AuthenticateVoter
-exports.commands.CastVote = CastVote
-exports.commands.ClosePolls = ClosePolls
-exports.commands.CreateElectionAdmin = CreateElectionAdmin
-exports.commands.CreateOrganization = CreateOrganization
-exports.commands.CreateReferendum = CreateReferendum
-exports.commands.DeleteReferendum = DeleteReferendum
-exports.commands.OpenPolls = OpenPolls
-exports.commands.RegisterVoter = RegisterVoter
+const commands = {
+  AuthenticateVoter,
+  CastVote,
+  ClosePolls,
+  CreateElectionAdmin,
+  CreateOrganization,
+  CreateReferendum,
+  DeleteReferendum,
+  OpenPolls,
+  RegisterVoter
+}
 
-exports.domain = {}
-exports.domain.ElectionAdmin = ElectionAdmin
-exports.domain.Errors = Errors
-exports.domain.Organization = Organization
-exports.domain.PostalAddress = PostalAddress
-exports.domain.Referendum = Referendum
-exports.domain.Vote = Vote
-exports.domain.Voter = Voter
+const domain = {
+  ElectionAdmin,
+  Errors,
+  Organization,
+  PostalAddress,
+  Referendum,
+  Vote,
+  Voter
+}
 
-exports.events = {}
-exports.events.ElectionAdminAppointed = ElectionAdminAppointed
-exports.events.ElectionAdminCreated = ElectionAdminCreated
-exports.events.OrganizationCreated = OrganizationCreated
-exports.events.PollsClosed = PollsClosed
-exports.events.PollsOpened = PollsOpened
-exports.events.ReferendumCreated = ReferendumCreated
-exports.events.ReferendumDeleted = ReferendumDeleted
-exports.events.VoteCast = VoteCast
-exports.events.VoterAuthenticated = VoterAuthenticated
-exports.events.VoterHasVoted = VoterHasVoted
-exports.events.VoterRegistered = VoterRegistered
+const events = {
+  ElectionAdminAppointed,
+  ElectionAdminCreated,
+  OrganizationCreated,
+  PollsClosed,
+  PollsOpened,
+  ReferendumCreated,
+  ReferendumDeleted,
+  VoteCast,
+  VoterAuthenticated,
+  VoterHasVoted,
+  VoterRegistered
+}
 
-exports.Utils = new Utils()
+const utils = new Utils()
+
+module.exports = {
+  commands,
+  domain,
+  events,
+  utils
+}
