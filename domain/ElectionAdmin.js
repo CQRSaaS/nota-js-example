@@ -43,7 +43,6 @@ class ElectionAdmin {
         break
       default:
         return true
-        break
     }
     return postalCodeRegex
   }
