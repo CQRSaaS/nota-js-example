@@ -48,10 +48,10 @@ class Organization {
       throw new errors.ValidationFailed(validationErrors)
     }
 
-    var result = []
-    result.push(new OrganizationCreated(command.organizationId, command.name))
-    result.push(new ElectionAdminAppointed(command.organizationId, command.electionAdminId))
-    return result
+    return Array.of(
+      new OrganizationCreated(command.organizationId, command.name),
+      new ElectionAdminAppointed(command.organizationId, command.electionAdminId)
+    )
   }
 }
 

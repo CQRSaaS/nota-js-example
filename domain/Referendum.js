@@ -130,9 +130,9 @@ class Referendum {
       throw new errors.ValidationFailed(validationErrors)
     }
     command.options.push('None of the above')
-    var result = []
-    result.push(new ReferendumCreated(command.referendumId, command.organizationId, command.name, command.proposal, command.options))
-    return result
+    return Array.of(
+      new ReferendumCreated(command.referendumId, command.organizationId, command.name, command.proposal, command.options)
+    )
   }
 
   _DeleteReferendum (command) {
@@ -152,9 +152,9 @@ class Referendum {
     if (validationErrors.length > 0) {
       throw new errors.ValidationFailed(validationErrors)
     }
-    var result = []
-    result.push(new ReferendumDeleted(command.referendumId))
-    return result
+    return Array.of(
+      new ReferendumDeleted(command.referendumId)
+    )
   }
 
   _OpenPolls (command) {
@@ -174,9 +174,9 @@ class Referendum {
     if (validationErrors.length > 0) {
       throw new errors.ValidationFailed(validationErrors)
     }
-    var result = []
-    result.push(new PollsOpened(command.referendumId))
-    return result
+    return Array.of(
+      new PollsOpened(command.referendumId)
+    )
   }
 
   _ClosePolls (command) {
@@ -193,9 +193,9 @@ class Referendum {
     if (validationErrors.length > 0) {
       throw new errors.ValidationFailed(validationErrors)
     }
-    var result = []
-    result.push(new PollsClosed(command.referendumId))
-    return result
+    return Array.of(
+      new PollsClosed(command.referendumId)
+    )
   }
 
   _AuthenticateVoter (command) {
@@ -222,9 +222,9 @@ class Referendum {
     if (validationErrors.length > 0) {
       throw new errors.ValidationFailed(validationErrors)
     }
-    var result = []
-    result.push(new VoterAuthenticated(command.referendumId, command.organizationId, command.voterId))
-    return result
+    return Array.of(
+      new VoterAuthenticated(command.referendumId, command.organizationId, command.voterId)
+    )
   }
 
   _CastVote (command) {
@@ -250,11 +250,11 @@ class Referendum {
     if (validationErrors.length > 0) {
       throw new errors.ValidationFailed(validationErrors)
     }
-    var result = []
-    // This is a problem for ensuring votes are secret: VoterHasVoted followed so closely in time by VoteCast allows the two events to be correlated.
-    result.push(new VoterHasVoted(command.referendumId, command.voterId))
-    result.push(new VoteCast(command.referendumId, command.vote))
-    return result
+    return Array.of(
+      // This is a problem for ensuring votes are secret: VoterHasVoted followed so closely in time by VoteCast allows the two events to be correlated.
+      new VoterHasVoted(command.referendumId, command.voterId),
+      new VoteCast(command.referendumId, command.vote)
+    )
   }
 }
 

@@ -60,9 +60,9 @@ class Voter {
     if (validationErrors.length > 0) {
       throw new errors.ValidationFailed(validationErrors)
     }
-    var result = []
-    result.push(new VoterRegistered(command.voterId, command.organizationId, command.firstname, command.lastname, command.address))
-    return result
+    return Array.of(
+      new VoterRegistered(command.voterId, command.organizationId, command.firstname, command.lastname, command.address)
+    )
   }
 };
 

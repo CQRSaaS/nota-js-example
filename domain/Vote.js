@@ -46,9 +46,9 @@ class Vote {
     if (validationErrors.length > 0) {
       throw new errors.ValidationFailed(validationErrors)
     }
-    var result = []
-    result.push(new VoteCast(command.referendumId, command.vote))
-    return result
+    return Array.of(
+      new VoteCast(command.referendumId, command.vote)
+    )
   }
 };
 

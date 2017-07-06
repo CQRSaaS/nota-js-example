@@ -75,9 +75,9 @@ class ElectionAdmin {
     if (validationErrors.length > 0) {
       throw new errors.ValidationFailed(validationErrors)
     }
-    var result = []
-    result.push(new ElectionAdminCreated(command.electionAdminId, command.firstname, command.lastname, command.address))
-    return result
+    return Array.of(
+      new ElectionAdminCreated(command.electionAdminId, command.firstname, command.lastname, command.address)
+    )
   }
 }
 
